@@ -1,0 +1,154 @@
+/* Simple Projects List
+   Minimal, text-only layout with thin horizontal rules.
+   Dark background, serif headings, muted descriptions.
+*/
+
+.projects-simple {
+  --project-bg: var(--background);
+  --project-ink: var(--text);
+  --project-ink-muted: var(--text-secondary);
+  --project-ink-dim: var(--text-secondary);
+  --project-line: var(--card-border);
+
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  position: relative;
+  background: var(--project-bg);
+  color: var(--project-ink);
+
+  margin: 0 -1.5rem;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+.projects-heading {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--project-ink);
+  padding: 96px 6vw 56px;
+  border-bottom: 1px solid var(--project-line);
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  border-bottom: 1px solid var(--project-line);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item { opacity: 1; }
+}
+
+.project-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 48px 6vw;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.35s ease;
+}
+
+.project-link:hover {
+  background: rgba(245, 240, 230, 0.025);
+}
+
+.project-name {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--project-ink);
+  transition: color 0.3s ease;
+}
+
+.project-link:hover .project-name {
+  color: var(--project-ink);
+}
+
+.project-domain {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--project-ink-dim);
+  transition: color 0.3s ease;
+}
+
+.project-link:hover .project-domain {
+  color: var(--project-ink-muted);
+}
+
+.project-desc {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--project-ink-muted);
+  max-width: 520px;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover .project-desc {
+  color: rgba(245, 240, 230, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-simple {
+    margin: 0;
+    width: 100%;
+    min-height: 100dvh;
+  }
+
+  .projects-heading {
+    padding: 64px 24px 36px;
+    font-size: clamp(36px, 10vw, 64px);
+  }
+
+  .project-link {
+    padding: 36px 24px;
+    gap: 5px;
+  }
+
+  .project-name {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+
+  .project-domain {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+
+  .project-desc {
+    font-size: 14px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-simple {
+    margin: 0;
+    width: 100%;
+    min-height: 100dvh;
+  }
+
+  .projects-heading {
+    padding: 48px 18px 28px;
+  }
+
+  .project-link {
+    padding: 28px 18px;
+  }
+}

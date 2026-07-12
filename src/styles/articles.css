@@ -1,0 +1,119 @@
+.articles-section {
+  margin-bottom: 48px;
+}
+
+.articles-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.articles-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.substack-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.article-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card {
+  cursor: pointer;
+  border-color: var(--card-border);
+  background: transparent;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  background: var(--card-hover);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.article-card {
+  cursor: pointer;
+  border-color: var(--card-border);
+  background: transparent;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  background: var(--card-hover);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ADD THIS HERE */
+.article-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.article-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 16px !important;
+}
+
+.article-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 16px !important;
+}
+
+.article-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.article-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.article-excerpt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.article-read-more {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.article-card:hover .article-read-more {
+  opacity: 1;
+}
