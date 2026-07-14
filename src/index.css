@@ -19,6 +19,8 @@
   --footer-hover: #333;
   --github-fill: #333;
   --x-fill: #000;
+  --button-bg: rgba(0, 0, 0, 0.03);
+--button-border: rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] {
@@ -41,6 +43,8 @@
   --footer-hover: #ccc;
   --github-fill: #e8e8e8;
   --x-fill: #e8e8e8;
+  --button-bg: rgba(255, 255, 255, 0.05);
+--button-border: rgba(255, 255, 255, 0.12);
 }
 
 * {

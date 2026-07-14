@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="portfolio">
-      <header className="header ${menuOpen ? 'open' : ''}">
+      <header className={`header ${menuOpen ? 'open' : ''}`}>
         <div className="header-left">
           <h1>
             <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
