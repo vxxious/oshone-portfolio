@@ -209,12 +209,13 @@ const inner = (
         <Music size={18} />
       </div>
     )}
-
-    <div className="np-meta">
-      <div className="np-status">
-        {track.isPlaying ? <Equalizer /> : <span className="np-dot" />}
-        {track.isPlaying ? "Now playing" : "Last played"}
-      </div>
+<div className="np-meta">
+    <div className="np-status">
+  {track.isPlaying ? <Equalizer /> : <span className="np-dot" />}
+  {track.isPlaying
+    ? "currently listening to"
+    : "last listened to"}
+</div>
 
       <div className="np-title">{track.title}</div>
       <div className="np-artist">{track.artist}</div>
@@ -236,7 +237,7 @@ const inner = (
 
     <SpotifyIcon className="np-spotify" />
   </>
-);
+); 
 
 return (
   <div className="now-playing">

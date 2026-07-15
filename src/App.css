@@ -1030,16 +1030,19 @@ margin-top: 2px;
   justify-content:flex-start;
   gap:2px;
   min-width:0;
+  margin-right:12px;
 }
 .np-status {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-secondary);
+  font-size: 13px;
+  text-transform:none;
+  letter-spacing: 0.10em;
+  color:var(--text-secondary);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 4px;
+  white-space: normal;
+  font-weight: 500;
 }
 .np-dot {
   width: 6px; height: 6px; border-radius: 50%;
